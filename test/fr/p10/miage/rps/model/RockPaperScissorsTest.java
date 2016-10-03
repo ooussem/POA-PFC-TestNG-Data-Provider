@@ -48,7 +48,7 @@ public class RockPaperScissorsTest {
                 {RPSEnum.PAPER,RPSEnum.SCISSORS}};
     }
 
-    @Test(dataProvider = "winData")
+    @Test(dataProvider = "lostData")
     public void testLostPlay(RPSEnum p1, RPSEnum p2) throws Exception {
         System.out.println("Test DP 2");
         assertEquals(rps.play(p1, p2), Result.LOST);
