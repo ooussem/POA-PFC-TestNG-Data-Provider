@@ -56,17 +56,17 @@ public class RockPaperScissorsTest {
 
     @DataProvider(name = "tieData")
     public Object[][] createTieData(){
-        return new Object[][]{{RPSEnum.ROCK,RPSEnum.PAPER}, {RPSEnum.SCISSORS,RPSEnum.ROCK},
-                {RPSEnum.PAPER,RPSEnum.SCISSORS}};
+        return new Object[][]{{RPSEnum.ROCK,RPSEnum.ROCK}, {RPSEnum.SCISSORS,RPSEnum.SCISSORS},
+                {RPSEnum.PAPER,RPSEnum.PAPER}};
     }
 
     @Test(dataProvider = "tieData")
     public void testTiePlay(RPSEnum p1, RPSEnum p2) throws Exception {
-        System.out.println("Test DP 2");
+        System.out.println("Test DP 3");
         assertEquals(rps.play(p1, p2), Result.TIE);
     }
 
-    //************* Fin DataPorvider ****************
+    //************* Fin DataProvider ****************
 
 
 
