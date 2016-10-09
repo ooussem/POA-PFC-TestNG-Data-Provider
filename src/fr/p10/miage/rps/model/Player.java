@@ -14,7 +14,7 @@ public class Player {
     private List<RPSEnum> listMovement;
     private final int min = 0;
     private final int max = 2;
-    private int nbreMvt = 20;
+    private final int nbreMvt = 20;
 
     public Player(String nom, List<RPSEnum> pListMovement) {
         this.nom = nom;
@@ -31,10 +31,11 @@ public class Player {
     {
         List<RPSEnum> listMovementRand = null;
         try {
-            int n = (min + (int) (Math.random() * ((max - min) + 1)));
+            int n;
             listMovementRand = new ArrayList<RPSEnum>();
             for (int i = 0; i < this.nbreMvt; i++)
             {
+                n = (min + (int) (Math.random() * ((max - min) + 1)));
                 switch (n)
                 {
                     case 0:listMovementRand.add(RPSEnum.PAPER); break;
@@ -42,6 +43,7 @@ public class Player {
                     case 2:listMovementRand.add(RPSEnum.SCISSORS); break;
                     default:listMovementRand.add(null);
                 }
+
             }
         }catch (Exception e){
             e.printStackTrace();

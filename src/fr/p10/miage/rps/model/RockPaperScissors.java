@@ -11,8 +11,10 @@ public class RockPaperScissors {
     public RockPaperScissors() {
     }
 
-    Result play(RPSEnum p1, RPSEnum p2){
-        if(p1.equals(p2)) return Result.TIE;
+    Result play(RPSEnum p1, RPSEnum p2)
+    {
+        if(p1.equals(p2))
+            return Result.TIE;
 
         if(p1.equals(RPSEnum.PAPER))
             if(p2.equals(RPSEnum.ROCK))
@@ -34,6 +36,11 @@ public class RockPaperScissors {
 
         else
             return Result.LOST;
+    }
+
+    Result play(Player p1, Player p2)
+    {
+        return Result.LOST;
     }
 
 }
